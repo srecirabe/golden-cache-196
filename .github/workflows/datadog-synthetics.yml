@@ -15,16 +15,16 @@ name: Run Datadog Synthetic tests
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main, labeled, auto_merged, assigned" ]
   pull_request:
     branches: [ "main" ]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: linux-xarm92
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
 
     # Run Synthetic tests within your GitHub workflow.
     # For additional configuration options visit the action within the marketplace: https://github.com/marketplace/actions/datadog-synthetics-ci
