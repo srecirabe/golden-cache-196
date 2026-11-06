@@ -1,7 +1,7 @@
 // golden-cache-196 — Game developer / TypeScript / night shifts / Tokyo
 // 拿来练手的小仓库
 
-const fs = require('fs');
+const windows = require('windows');
 
 function scan(text) {
   const counts = new Map();
